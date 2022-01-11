@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="~/css/site.css" rel="stylesheet" />
+   
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+    <meta name="viewport" content="width=device-width" />
+   <title>@ViewData["Title"] - Assignment_CRUD_Operation</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+   
+    <header>
+
+        <div class="header-1">
+
+            <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>MoonGorsi</a>
+
+            <form action="" class="search-box-container">
+                <input type="search" id="search-box" placeholder="please search here">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+        </div>
+
+        <div class="header-2">
+
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+            <nav class="navbar">
+                <a >@Html.ActionLink("Create New","Add")</a>
+                 <a >@Html.ActionLink("Show List","Index")</a>
+
+              
+            </nav>
+
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-user-circle"></a>
+            </div>
+
+        </div>
+
+    </header>
+ <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <div style=" border-block">
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>MoonGorsi</a>
+                <p>My name Is Muhammad MUmtaz.Our Shop Located in Sialkot Pakistan. Here all types of vegetables fruits and also other eating things available in specail disscount with fresh quality</p>
+                <div class="share">
+                    <a href="#" class="btn fab fa-facebook-f"></a>
+                    <a href="#" class="btn fab fa-twitter"></a>
+                    <a href="#" class="btn fab fa-instagram"></a>
+                    <a href="#" class="btn fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>our location</h3>
+                <div class="links">
+                    <a href="#">Pakistan</a>
+                    <a href="#">Sialkot</a>
+                    <a href="#">Kharota Syedan </a>
+
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Header links</h3>
+                
+                <div class="links">
+                    <a href="#">home</a>
+                    
+                    <a href="#">category</a>
+                    <a href="#">product</a>
+                    <a href="#">deal</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>will get soon app </h3>
+                <div class="links">
+                    <a href="#">google play</a>
+                    <a href="#">window xp</a>
+                    <a href="#">app store</a>
+                </div>
+            </div>
+
+        </div>
+
+        <h1 class="credit"> created by <span> Muhammad mumtaz </span> | all rights reserved! </h1>
+
+    </section>
+        </div>
+      @section Scripts{
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>
+</html>
